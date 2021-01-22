@@ -1,0 +1,188 @@
+@font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: '국립박물관문화재단클래식B';
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/*POPUP*/
+#popup {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+}
+
+#popup.active {
+    display: block;
+}
+
+#popup .popup-wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    /*    height: 50%;*/
+    text-align: center;
+    background-color: white;
+    padding: 1.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+    #popup .popup-wrap {
+        width: 70%;
+    }
+}
+
+#popup .popup-text {
+    color: #000;
+    font-size: 1.5rem;
+}
+
+#popup .popup-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-family: inherit;
+    color: #999;
+}
+
+#popup .popup-text h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#popup .popup-text p {
+    font-size: 0.7rem;
+    margin: 1rem 0;
+}
+
+#popup .popup-wrap img {
+    width: 100%;
+}
+
+#popup .popup-wrap .close-btn {
+    display: block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    font-size: 2rem;
+    top: 0;
+    left: 0;
+}
+
+#popup .popup-wrap .close-btn::before,
+#popup .popup-wrap .close-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 0.05em;
+    height: 100%;
+    transform: translateX(-50%) rotate(45deg);
+    background-color: #fff;
+}
+
+#popup .popup-wrap .close-btn::after {
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/*MAIN*/
+.main {
+    margin-top: 4rem;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 2rem;
+}
+
+.main .row > div {
+    margin-bottom: 3rem;
+}
+
+/*LEFT IMG*/
+.main .img-box {
+    /*    cursor: pointer;*/
+}
+
+/*RIGHT TEXT*/
+.center-text .text-box-inner {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-text .text-box-inner div {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.main .text-box {
+    margin: 1rem 0;
+}
+
+.main .text-box .project {
+    cursor: pointer;
+}
+
+.main .afterline {
+    position: relative;
+}
+
+.main .afterline::after {
+    position: absolute;
+    content: "";
+    background-color: #fff;
+    width: 100%;
+    height: 0.3rem;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.main .afterline:hover::after {
+    display: block;
+}
+
+/*FOOTER*/
+.footer-wrap {
+    padding: 0 2rem 4rem 2rem;
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+.footer-wrap p {
+    float: left
+}
+.footer-wrap .footer-two {
+    float: right
+}
